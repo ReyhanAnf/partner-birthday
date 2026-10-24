@@ -1,0 +1,61 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Diagnostic / Coverage
+coverage
+*.lcov
+
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+.pnpm-store
+
+# Production build output
+dist
+dist-ssr
+*.local
+
+# Raw source media (optimized production assets are in public/media/)
+/exclusive/
+/isha/
+/reyhan&isha/
+
+# Environment variables
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+
+# AI Agent internal artifacts and scratchpads
+.agents/
+.gemini/
+scratch/
+scratch_*
+
+# Vite / Build tool cache
+.vite
