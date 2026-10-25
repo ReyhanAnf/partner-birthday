@@ -122,6 +122,19 @@ export interface RomanticConfig {
     postConfettiMessage: LocalizedString;
     replayButton: LocalizedString;
   };
+  secretGift?: {
+    sectionTitle: LocalizedString;
+    sectionSubtitle: LocalizedString;
+    secretPrompt: LocalizedString;
+    categories: { id: string; label: string; icon: string }[];
+    placeholderWish: LocalizedString;
+    placeholderNotes: LocalizedString;
+    submitButton: LocalizedString;
+    successTitle: LocalizedString;
+    successMessage: LocalizedString;
+    sendToWhatsAppButton: LocalizedString;
+    whatsappNumber?: string;
+  };
 }
 
 export const romanticConfig: RomanticConfig = {
@@ -424,26 +437,34 @@ export const romanticConfig: RomanticConfig = {
     },
     letter: {
       salutation: {
-        id: 'Untuk Isha Alfitriani (Saa),',
-        en: 'To Isha Alfitriani (Saa),',
+        id: 'Selamat ulang tahun sayanggg.. ❤️🩷',
+        en: 'Happy birthday my love.. ❤️🩷',
       },
       paragraphs: [
         {
-          id: 'Selamat ulang tahun yang ke-21, Saa. Dari zaman TK sampai sekarang, sudah banyak banget yang kita lewati bareng, dari masa kecil, sekolah, jalan-jalan, hari-hari yang seru, sampai hari-hari yang capek juga.',
-          en: 'Happy 21st birthday, Saa. From kindergarten until now, we have been through so much together: childhood, school, trips, fun days, and tiring ones too.',
+          id: 'Ga kerasa ya tiba tiba nambah umur ajaa, yang ke twenty :). Hari spesial ini banyak banget hal yang udah kamu lalui dari kamu lahirr, ketemu aku dan sampe sekarang.',
+          en: 'Time flies so fast, suddenly another year older, turning twenty :). On this special day, there are so many things you have been through from when you were born, meeting me, and until right now.',
         },
         {
-          id: 'Terima kasih sudah jadi teman jalan sekaligus pacar yang selalu ada, yang sabar, dan yang selalu bikin hal-hal biasa terasa lebih hidup.',
-          en: 'Thank you for being my travel buddy and girlfriend who is always there, patient, and making ordinary days feel so lively.',
+          id: 'Aku bahagia dan bersyukur banget bisa kenal kamu ayy, kamu selalu punya tempat di hati aku..',
+          en: 'I am so truly happy and grateful to know you, you always hold a special place in my heart..',
         },
         {
-          id: 'Semoga di umur 21 ini kamu sehat selalu, makin lancar segala urusan dan kuliah/pekerjaanmu, dan apa pun yang lagi kamu usahakan bisa tercapai. Masih banyak cerita dan tempat seru yang harus kita datangi bareng.',
-          en: 'May your 21st year be filled with health, smooth days for everything you do, and the fulfillment of what you strive for. There are still so many adventures we have yet to explore together.',
+          id: 'Makasih ya udah sabar, dukung dan nemenin aku, udah bikin hari hari aku jadi lebih seruu. Makasih juga udah bikin aku belajar banyak hal tentang pengertian.',
+          en: 'Thank you for being patient, supporting and accompanying me, for making my days so much more fun. Thank you also for teaching me so much about understanding.',
+        },
+        {
+          id: 'Semoga semua hal-hal baik datang ke kamuu,, kesehatan, rezeki yang lancar, semuaa urusan kamu dipermudah , apapun yang kamu semoga kan dapat tercapaii, kuliah dan hal apapun dilancarkan..',
+          en: 'May all good things come to you, good health, smooth blessings, all your affairs made easy, whatever you wish for can be achieved, your studies and everything made smooth..',
+        },
+        {
+          id: 'Kamu memang kuat dan mandiri ayy, dan aku yakin kamu bisa hadapin rintangan yang ada. Tapi aku mohon kamu jangan selalu hadapi sendiri, ada aku ayy yang bakal selalu support kamu, libatin aku di hari hari kamu. Apapun yang terjadi kita lewati bareng bareng..',
+          en: 'You are indeed strong and independent, and I believe you can overcome any obstacle. But please don\'t always face it alone, I am here and will always support you, involve me in your days. Whatever happens, we will go through it together..',
         },
       ],
       closing: {
-        id: 'Dari pacarmu yang selalu bangga sama kamu,',
-        en: 'From your boyfriend who is always proud of you,',
+        id: 'Happy birthday my princess yang kicik imut gemazz 🩵🩵🩵🩵',
+        en: 'Happy birthday my princess yang kicik imut gemazz 🩵🩵🩵🩵',
       },
       signature: 'Reyhan',
       stampText: {
@@ -463,6 +484,53 @@ export const romanticConfig: RomanticConfig = {
       id: 'Sekali lagi',
       en: 'Once more',
     },
+  },
+
+  secretGift: {
+    sectionTitle: {
+      id: 'Kotak Titip Kado Rahasia 🎁✨',
+      en: 'Secret Gift Capsule 🎁✨',
+    },
+    sectionSubtitle: {
+      id: 'Khusus buat Saa: titip kado atau wishlist apa pun yang lagi kamu pengenin',
+      en: 'Exclusively for Saa: whisper any gift or wish you have been secretly hoping for',
+    },
+    secretPrompt: {
+      id: 'Psst... Tulis apa pun yang kamu pengenin di sini, jangan malu-malu yaa. Seolah-olah rahasia ke bintang-bintang... tapi tenang, Reyhan bakal langsung peka! 🤫💖',
+      en: 'Psst... Write down whatever you wish for here, don\'t be shy. Kept as a secret under the stars... but don\'t worry, Reyhan will secretly receive the signal! 🤫💖',
+    },
+    categories: [
+      { id: 'kado', label: 'Wishlist Kado', icon: '🎁' },
+      { id: 'fashion', label: 'Baju / Aksesoris', icon: '👗' },
+      { id: 'kuliner', label: 'Makan Enak', icon: '🍣' },
+      { id: 'trip', label: 'Jalan Bareng', icon: '🗺️' },
+      { id: 'surprise', label: 'Surprise Me!', icon: '✨' },
+    ],
+    placeholderWish: {
+      id: 'Mau kado apa nih? (contoh: tas, sepatu, novel, boneka, skincare, atau traktiran...)',
+      en: 'What gift do you desire? (e.g., bag, shoes, novel, plushie, skincare, or a treat...)',
+    },
+    placeholderNotes: {
+      id: 'Catatan tambahan / link / warna favorit (opsional)',
+      en: 'Additional notes / link / favorite color (optional)',
+    },
+    submitButton: {
+      id: 'Kunci & Titip ke Kotak Rahasia 🔒',
+      en: 'Lock & Store in Secret Capsule 🔒',
+    },
+    successTitle: {
+      id: 'Tersimpan Rahasia di Brankas! 🎀',
+      en: 'Secretly Sealed in the Vault! 🎀',
+    },
+    successMessage: {
+      id: 'Wishlist kado kamu sudah disegel rapat dengan pita emas. Reyhan bakal langsung tau kode rahasianya! 🤫✨',
+      en: 'Your gift wish is sealed tight with golden ribbons. Reyhan will secretly receive the memo! 🤫✨',
+    },
+    sendToWhatsAppButton: {
+      id: 'Bisikkan ke WA Reyhan Langsung 💌',
+      en: 'Whisper Directly to Reyhan\'s WA 💌',
+    },
+    whatsappNumber: '',
   },
 };
 

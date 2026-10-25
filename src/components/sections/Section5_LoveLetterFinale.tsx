@@ -10,6 +10,7 @@ import confetti from 'canvas-confetti';
 import { Heart, Sparkles, PartyPopper } from 'lucide-react';
 import { romanticConfig, Locale, getRomanticText } from '../../config/romanticConfig';
 import { ISHA_ASSETS, REYHAN_ISHA_ASSETS } from '../../data/assetsManifest';
+import { SecretGiftWishlist } from '../ui/SecretGiftWishlist';
 
 export interface Section5LoveLetterFinaleProps {
   locale: Locale;
@@ -310,8 +311,11 @@ export const Section5_LoveLetterFinale: React.FC<Section5LoveLetterFinaleProps> 
             </motion.p>
           )}
 
+          {/* Secret Gift Wishlist Capsule ("Titip Kado") */}
+          <SecretGiftWishlist locale={locale} />
+
           {/* Subtle Epilogue Colophon */}
-          <p className="mt-8 text-[11px] font-mono uppercase tracking-[0.35em] text-slate-500">
+          <p className="mt-12 text-[11px] font-mono uppercase tracking-[0.35em] text-slate-500">
             {recipient.fullName} &bull; {recipient.milestoneYear}
           </p>
         </div>
